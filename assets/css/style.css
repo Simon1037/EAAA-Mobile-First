@@ -1,14 +1,21 @@
-/* Reset Style */
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
 
 * {
   margin: 0;
   padding: 0;
+  font: inherit;
 }
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
+html {
+  /* Not widely supported */
+  hanging-punctuation: first last;
 }
 
 /* Remove list styles (bullets/numbers) */
@@ -16,6 +23,16 @@ ol,
 ul,
 menu {
   list-style: none;
+}
+
+/* responsive images/videos */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
 
 /* For images to not be able to exceed their container */
@@ -26,8 +43,9 @@ img {
 
 /* Smooth scrolling for users that don't prefer reduced motion */
 @media (prefers-reduced-motion: no-preference) {
-  html:focus-within {
+  :has(:target) {
     scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
   }
 }
 
@@ -50,7 +68,8 @@ select {
 }
 
 /* Avoid text overflows and setting the color */
-p,
+/* text-wrap: balanced; Will ballance text so it will be equal wide */
+
 h1,
 h2,
 h3,
@@ -58,6 +77,14 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  text-wrap: balanced;
+}
+
+/* Removes a only word on a new line */
+
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
 }
 
 /* ==========================================================================
@@ -76,51 +103,48 @@ h6 {
 }
 
 body {
-  font-family: "Figtree", sans-serif;
+  font-family: "Open sans", sans-serif;
   background-color: var(--primary-1-color);
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.5;
-  min-width: 100vh;
-  min-width: 100svh;
 }
 
 /* ==========================================================================
    Header styles
    ========================================================================== */
-
-.primary-navigation {
-  background-color: white;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-.primary-navigation ul {
+header {
+  position: relative;
   width: 100%;
-  list-style: none;
+  min-height: 65px;
+  display: grid;
+}
+
+.navigation {
+  background-color: var(--primary-1-color);
+  padding: 0 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
-.primary-navigation li {
+.navigation span {
+  display: block;
+  text-align: center;
+}
+
+.navigation span:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navigation span:last-child {
+  font-size: 0.8rem;
+}
+
+.navigation img {
   height: 50px;
-}
-
-.primary-navigation a {
-  height: 100%;
-  padding: 0 30px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  color: var(--primary-text-color);
-}
-
-.primary-navigation a:hover {
-  background-color: #f0f0f0;
-}
-
-.primary-navigation li:first-child {
-  margin-right: auto;
+  width: 50px;
 }
 
 .sidebar {
@@ -128,35 +152,86 @@ body {
   top: 0;
   right: 0;
   height: 100vh;
-  max-width: 250px;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
+  width: 300px;
+  overflow-x: hidden;
+  background-color: var(--primary-1-color);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  display: none;
+  transition: transform 0.2s ease-in-out;
+  /* Comment: Will make the sidebar start off screen */
+  transform: translateX(100%);
+  z-index: 999;
+}
+
+.sidebar ul {
+  position: relative;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  gap: 25px;
+  padding: 50px;
 }
 
-.menu-button {
-  display: none;
+.sidebar ul::before,
+.sidebar ul::after {
+  content: "";
+  width: 100%;
+  border-bottom: 1px solid var(--primary-text-color);
 }
 
-@media (max-width: 800px) {
-  .primary-navigation ul:not(.sidebar) li:not(:is(:first-child, :last-child)) {
+.sidebar ul::before {
+  margin-bottom: 10px;
+}
+
+.sidebar ul::after {
+  margin-top: 10px;
+}
+
+.sidebar li {
+  font-size: 1.2rem;
+}
+
+.sidebar li:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+}
+
+.sidebar img {
+  height: 40px;
+  width: 40px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+@media (min-width: 1024px) {
+  .navigation {
+    justify-content: flex-end;
+  }
+  .navigation div:nth-child(2) {
+    margin-right: auto;
+  }
+  #showSidebar {
     display: none;
   }
-  .primary-navigation ul {
-    justify-content: flex-start;
-  }
-  .menu-button {
-    display: block;
-  }
-}
-
-@media (max-width: 400px) {
   .sidebar {
-    width: 100%;
+    position: relative;
+    height: auto;
+    width: auto;
+    box-shadow: none;
+    transform: translateX(0);
+  }
+  .sidebar ul {
+    flex-direction: row;
+    padding: 0;
+  }
+  .sidebar ul::before,
+  .sidebar ul::after {
+    display: none;
+  }
+  .sidebar li:first-child {
+    display: none;
   }
 }

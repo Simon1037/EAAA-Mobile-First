@@ -33,42 +33,35 @@
   </head>
   <body>
     <header>
-      <nav class="primary-navigation">
-        <ul class="sidebar">
-          <li onclick="hideSidebar()">
-            <a href="#"
-              ><img
-                src="assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg"
-                alt=""
-            /></a>
-          </li>
-          <li><a href="#">Arrangementer</a></li>
-          <li><a href="#">Bestil bord</a></li>
-          <li><a href="#">Bøger</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Om os</a></li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#"
-              ><img
-                src="/assets/icons/book-and-tail-no-color.png"
-                alt="Løve's Bog- og Vincafé Logo"
-            /></a>
-          </li>
-          <li><a href="#">Arrangementer</a></li>
-          <li><a href="#">Bestil bord</a></li>
-          <li><a href="#">Bøger</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Om os</a></li>
-          <li class="menu-button" onclick="showSidebar()">
-            <a href="#"
-              ><img
-                src="assets/icons/menu_FILL0_wght400_GRAD0_opsz48.svg"
-                alt=""
-            /></a>
-          </li>
-        </ul>
+      <nav class="navigation sticky">
+        <div>
+          <a href="#"
+            ><img
+              src="/assets/icons/book-and-tail-no-color.png"
+              alt="Løve's Logo"
+          /></a>
+        </div>
+        <div>
+          <span>Løve's Bog- og Vincafé</span>
+          <span>boghandel, café og vinbar</s>
+        </div>
+        <div id="showSidebar">
+          <a href="#"
+            ><img
+              src="/assets/icons/menu_FILL0_wght400_GRAD0_opsz48.svg"
+              alt="Menu ikon"
+          /></a>
+        </div>
+        <div class="sidebar">
+          <ul>
+            <li><a id="hideSidebar" href="#"><img src="/assets/icons/close_FILL0_wght400_GRAD0_opsz48.svg" alt="Luk menu ikon"></a></li>
+            <li><a href="#">Arrangementer</a></li>
+            <li><a href="#">Bestil bord</a></li>
+            <li><a href="#">Bøger</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Om os</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main></main>
