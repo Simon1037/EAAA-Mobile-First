@@ -102,6 +102,11 @@ p {
   --secondary-text-color: #f5ede0;
 }
 
+:root {
+  --default-padding: 20px;
+  --section-gap: 50px;
+}
+
 body {
   font-family: "Open sans", sans-serif;
   background-color: var(--primary-1-color);
@@ -114,15 +119,16 @@ body {
    Header styles
    ========================================================================== */
 header {
-  position: relative;
+  position: fixed;
   width: 100%;
   min-height: 65px;
   display: grid;
+  transition: top 0.2s;
 }
 
 .navigation {
   background-color: var(--primary-1-color);
-  padding: 0 2rem;
+  padding: 0 var(--default-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
