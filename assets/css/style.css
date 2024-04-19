@@ -119,11 +119,12 @@ body {
    Header styles
    ========================================================================== */
 header {
-  position: fixed;
+  position: relative;
   width: 100%;
   min-height: 65px;
   display: grid;
   transition: top 0.2s;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .navigation {
@@ -140,7 +141,7 @@ header {
 }
 
 .navigation span:first-child {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -151,6 +152,12 @@ header {
 .navigation img {
   height: 50px;
   width: 50px;
+}
+
+#showSidebar {
+  margin: 0 10px;
+  height: 30px;
+  width: 30px;
 }
 
 .sidebar {
@@ -198,13 +205,13 @@ header {
 .sidebar li:first-child {
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 5px;
+  right: 0;
+  padding: 12px;
 }
 
 .sidebar img {
-  height: 40px;
-  width: 40px;
+  height: 2rem;
+  width: 2rem;
 }
 
 .sidebar a {

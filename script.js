@@ -1,3 +1,4 @@
+const body = document.getElementById("body");
 const showSidebar = document.getElementById("showSidebar");
 const hideSidebar = document.getElementById("hideSidebar");
 const sidebar = document.querySelector(".sidebar");
@@ -6,12 +7,14 @@ const sidebar = document.querySelector(".sidebar");
 
 showSidebar.addEventListener("click", () => {
   sidebar.style.transform = "translateX(0)";
+  body.style.overflow = "hidden";
 });
 
 /* this will move the sidebar out of view */
 
 hideSidebar.addEventListener("click", () => {
   sidebar.style.transform = "translateX(100%)";
+  body.style.overflow = "auto";
 });
 
 /* 
@@ -20,24 +23,23 @@ create let variable to determine scroll position
 */
 
 let lastScrollTop = 0;
-const navigation = document.querySelector("header");
+const header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
-  let scrollTop = window.scrollY || document.documentElement.scrollTop;
+  let scrollTop = window.scrollY;
 
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    navigation.style.top = "-65px"; // Adjust this value based on your header's height
+  /* Show header when at the top of the page */
+  if (scrollTop <= 0) {
+    header.style.top = "0";
+    header.style.position = "relative";
+  } else if (scrollTop > lastScrollTop) {
+    /* Scrolling down, sets top to -65 to hide the header */
+    header.style.top = "-65px";
+    header.style.position = "fixed";
   } else {
-    // Scrolling up
-    navigation.style.top = "0";
+    /* Scrolling up, setting position top to 0 */
+    header.style.top = "0";
+    header.style.position = "fixed";
   }
   lastScrollTop = scrollTop;
-});
-
-// Prevent default behavior for anchor tags with href="#"
-document.querySelectorAll('a[href="#"]').forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-  });
 });
