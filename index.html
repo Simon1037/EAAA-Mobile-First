@@ -68,26 +68,24 @@
     </header>
     <main>
       <!-- section til billede under navbar med BESTIL BORD knap -->
-      <section>
-        <!-- add "autoplay" when needed -->
-        <video loop muted>
+      <section id="video-section">
+        <video class="primary-video" autoplay loop muted>
           <source src="assets/videos/lbvc-reklamevideo.mp4" type="video/mp4">
+          <!-- There could be another video format to ensure compatibility -->
         </video>
-        <button class="btn btn-long">Bestil bord</button>
+        <button class="btn">Bestil bord</button>
       </section>
       <!-- section med intro tekst og gratis kaffe tekst -->
-      <section>
+      <section id="site-intro">
         <div>
-          <h2>Løve's Bog- og Vincafé</h2>
+          <h1>Løve's Bog- og Vincafé</h1>
           <p>Stedet, hvor litteratur, mad & vin hænger uløseligt sammen og hvor kulturen er levende.</p>
-          <div>
-            <span>Gratis WiFi!</span>
-          </div>
         </div>
+        <img src="assets/icons/free-wifi-sticker.svg" alt="Gratis Wifi annonce">
       </section>
       <!-- section med åbningstider -->
-      <section>
-        <div>
+      <section id="primary-openinghours">
+        <div class="openinghours">
           <h2>Åbningstider</h2>
           <ul>
             <li>Mandag</li>

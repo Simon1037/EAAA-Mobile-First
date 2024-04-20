@@ -119,7 +119,7 @@ body {
 /* Should always be on button or anker to make it a button */
 .btn {
   display: inline-block;
-  padding: 0 24px;
+  padding: 4px 20px;
   border: 2px solid var(--accent-2-color);
   border-radius: 5px;
   background-color: var(--accent-1-color);
@@ -147,7 +147,7 @@ body {
 
 /* add to button or anker to make it larger */
 .btn-lg {
-  padding: 5px 24px;
+  padding: 6px 24px;
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -155,6 +155,7 @@ body {
 /* ======================================MARK: Header styles ==================================== */
 header {
   position: relative;
+  z-index: 99;
   width: 100%;
   min-height: 65px;
   display: grid;
@@ -255,6 +256,61 @@ header {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+
+/* ===================================MARK: Main tag, index.html ======================================= */
+
+#video-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#video-section button {
+  position: absolute;
+  bottom: 10%;
+  /* Makes button appear above the video */
+  z-index: 1;
+}
+
+#site-intro {
+  padding: var(--default-padding);
+  display: flex;
+}
+
+#site-intro h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#site-intro img {
+  height: 100px;
+  width: 100px;
+}
+
+.openinghours {
+  padding: var(--default-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.openinghours h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.openinghours ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.openinghours li {
+  padding: 10px 2.5rem 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================MARK: Footer ======================================= */
 
 /* ===================================MARK: @media ======================================= */
 
