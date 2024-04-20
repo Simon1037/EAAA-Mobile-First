@@ -87,9 +87,7 @@ p {
   text-wrap: pretty;
 }
 
-/* ==========================================================================
-   General styles
-   ========================================================================== */
+/* ===================================MARK: General styles ======================================= */
 
 :root {
   --accent-1-color: #50a361;
@@ -100,6 +98,7 @@ p {
   --secondary-2-color: #c16804;
   --primary-text-color: #000000;
   --secondary-text-color: #f5ede0;
+  --shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 :root {
@@ -115,9 +114,45 @@ body {
   line-height: 1.5;
 }
 
-/* ==========================================================================
-   Header styles
-   ========================================================================== */
+/* ===================================MARK: Style templates ======================================= */
+
+/* Should always be on button or anker to make it a button */
+.btn {
+  display: inline-block;
+  padding: 0 24px;
+  border: 2px solid var(--accent-2-color);
+  border-radius: 5px;
+  background-color: var(--accent-1-color);
+  color: var(--accent-2-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-2-color);
+  color: var(--accent-1-color);
+  border-color: var(--accent-1-color);
+  /* Will remove the default focus outline and add when needed */
+  outline: none;
+}
+
+.btn:active {
+  box-shadow: inset 0 2px 4px var(--shadow-color); /* Inner shadow to give a "pressed" effect */
+}
+
+/* add to button or anker to make it larger */
+.btn-lg {
+  padding: 5px 24px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ======================================MARK: Header styles ==================================== */
 header {
   position: relative;
   width: 100%;
@@ -153,6 +188,8 @@ header {
   height: 50px;
   width: 50px;
 }
+
+/* ===================================MARK: Sidebar ======================================= */
 
 #showSidebar {
   margin: 0 10px;
@@ -218,6 +255,8 @@ header {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+
+/* ===================================MARK: @media ======================================= */
 
 @media (min-width: 1024px) {
   .navigation {

@@ -27,28 +27,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-  
-    <!-- Fonts definitioner -->
-    <!--
-    // <uniquifier>: Use a unique and descriptive class name
-      // <weight>: Use a value from 200 to 700
-      .oswald-<uniquifier> {
-        font-family: "Oswald", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-      }
-    // <uniquifier>: Use a unique and descriptive class name
-      // <weight>: Use a value from 300 to 800
-      .open-sans-<uniquifier> {
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-        font-variation-settings:
-          "wdth" 100;
-      }
-    -->
 
     <!-- Icons -->
 
@@ -88,16 +66,15 @@
         </div>
       </nav>
     </header>
-
-
     <main>
-
       <!-- section til billede under navbar med BESTIL BORD knap -->
       <section>
-        <picture></picture>
-        <p>Bestil bord</p>
+        <!-- add "autoplay" when needed -->
+        <video loop muted>
+          <source src="assets/videos/lbvc-reklamevideo.mp4" type="video/mp4">
+        </video>
+        <button class="btn btn-long">Bestil bord</button>
       </section>
-
       <!-- section med intro tekst og gratis kaffe tekst -->
       <section>
         <div>
@@ -108,7 +85,6 @@
           </div>
         </div>
       </section>
-
       <!-- section med åbningstider -->
       <section>
         <div>
@@ -131,7 +107,6 @@
           </ul>
         </div>
       </section>
-
       <!-- section med teaser til ARRANGEMENTER -->
       <section>
         <div>
@@ -143,7 +118,6 @@
         </section>
         <button>Se arrangementer</button>
       </section>
-
       <!-- section med teaser til BØGER -->
       <section>
         <div>
@@ -160,7 +134,6 @@
         </section>
         <button>Læs mere (ny tekst!!)</button>
       </section>
-
       <!-- section med teaser til MENUKORT -->
       <section>
         <div>
@@ -172,11 +145,7 @@
         </p>
         <button>Se menukort og vinkort</button>
       </section>
-
     </main>
-
-
-    <!-- footer  -->
     <footer>
 
       <section>
