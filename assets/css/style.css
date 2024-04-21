@@ -109,6 +109,19 @@ body {
   line-height: 1.5;
 }
 
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 /* ===================================MARK: Style templates ======================================= */
 
 /* Should always be on button or anker to make it a button */
@@ -138,22 +151,13 @@ body {
 
 .btn:active {
   /* this will give a inner shadow for a pressed effect */
-  box-shadow: inset 0 2px 4px var(--shadow-color);
+  box-shadow: inset var(--item-shadow);
 }
 
 /* add to button or anker to make it larger */
 .btn-lg {
   padding: 8px 32px;
   font-size: 1.3rem;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-h3 {
-  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -312,12 +316,52 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* TODO: Huh? */
-main{
-  max-width:900px;
-  margin: auto;
+.teaser {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
-/* ===================================MARK: Main tag, arrangementer ======================================= */
+
+.teaser img {
+  z-index: 1;
+}
+
+.sticker-on-books {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  z-index: 3; /*sørger for at sticker ligger øverst på øverst på det brune filter */
+}
+
+.title-to-teaser {
+  position: absolute;
+  top: 15%;
+  color: var(--accent-2-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 3; /* Sørger for, at titlen ligger øverst */
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.teaser-content {
+  padding: var(--default-padding);
+}
+
+.teaser::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Her kan vi justere den brune farve og gennemsigtigheden */
+  background-color: rgba(128, 64, 0, 0.267);
+  /* Sørger for, at overlayet ligger over billedet */
+  z-index: 2;
+}
+
+/* ===================================MARK: Main tag, boger ======================================= */
 
 .announcement {
   padding: 60px 0;
@@ -395,6 +439,77 @@ main{
   margin-top: 5px;
   display: flex;
 }
+
+/* ===================================MARK: Main tag, arrangementer ======================================= */
+
+.calender {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+}
+.calender ul {
+  display: grid;
+  gap: 10px;
+}
+.calender ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calender ul li a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.calender li:nth-child(1) .dot,
+.calender-table .activities-1 {
+  background-color: #ab8473;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+.calender li:nth-child(2) .dot,
+.calender-table .activities-2 {
+  background-color: #f2771e;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+.calender li:nth-child(3) .dot,
+.calender-table .activities-3 {
+  background-color: #f2c41e;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+}
+
+.calender-wrapper {
+  background-color: var(--secondary-3-color);
+  color: var(--secondary-text-color);
+  border-radius: 5px;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+}
+.calender-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+.calender-table td {
+  background-color: var(--primary-1-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: var(--primary-text-color);
+  text-align: center;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================MARK: Main tag, menu ======================================= */
 
 /* ===================================MARK: Footer ======================================= */
 
@@ -511,56 +626,3 @@ footer a {
     grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
   }
 }
-
-
-/* styling of front page*/
-
-.teaser{
-  position:relative;
-  display:flex;
-  justify-content: center;
-}
-
-
-.teaser img {
-  z-index: 1;
-}
-
-
-.sticker-on-books{
-  position:absolute;
-  top:60%;
-  right:10%;
-  z-index:3; /*sørger for at sticker ligger øverst på øverst på det brune filter */
-}
-
-.title-to-teaser{
-  position:absolute;
-  top: 15%;
-  color:var(--accent-2-color);
-  font-size: 1.5rem;
-  font-weight: 700;
-  z-index: 3; /* Sørger for, at titlen ligger øverst */
-  font-size: 1.5rem;
-  font-weight: 700;
-  
-}
-
-.teaser-content{
-  padding: var(--default-padding);
-}
-
-
-.teaser::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 64, 0, 0.267); /* Her kan vi justere den brune farve og gennemsigtigheden */
-  z-index: 2; /* Sørger for, at overlayet ligger over billedet */
-}
-
-
-
