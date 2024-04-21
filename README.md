@@ -6,7 +6,8 @@ This shoud be removed before last upload
 
 ### Button Component
 
-- Real button, does not use links
+- Real button, does not use links.
+- Used with Javascript.
 
 ```html
 <!-- default -->
@@ -16,6 +17,7 @@ This shoud be removed before last upload
 ```
 
 - Fake button, used for link. Has a role attribute to identify it as a button.
+- Used as a normal button.
 
 ```html
 <a href="#" role="button" class="btn">example text</a>
