@@ -346,6 +346,7 @@ header {
 
 .teaser-content {
   padding: var(--default-padding);
+  padding: 20px;
 }
 
 .teaser::after {
@@ -355,10 +356,13 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Her kan vi justere den brune farve og gennemsigtigheden */
-  background-color: rgba(128, 64, 0, 0.267);
-  /* Sørger for, at overlayet ligger over billedet */
-  z-index: 2;
+  background-color: rgba(
+    128,
+    64,
+    0,
+    0.267
+  ); /* Her kan vi justere den brune farve og gennemsigtigheden */
+  z-index: 2; /* Sørger for, at overlayet ligger over billedet */
 }
 
 /* ===================================MARK: Main tag, boger ======================================= */
