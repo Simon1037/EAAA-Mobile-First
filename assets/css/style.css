@@ -347,7 +347,9 @@ header {
   /* Sørger for, at overlayet ligger over billedet */
   z-index: 2;
 }
-
+.teaser picture {
+  width: 100%;
+}
 .teaser img {
   z-index: 1;
   position: relative;
