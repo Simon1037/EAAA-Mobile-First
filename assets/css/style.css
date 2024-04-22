@@ -198,6 +198,7 @@ header {
 .navigation img {
   height: 50px;
   width: 50px;
+  cursor: pointer;
 }
 
 /* ===================================MARK: Sidebar ======================================= */
@@ -206,6 +207,7 @@ header {
   margin: 0 10px;
   height: 30px;
   width: 30px;
+  cursor: pointer;
 }
 
 .sidebar {
@@ -327,13 +329,24 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 300px;
+}
+
+.teaser::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Her kan vi justere den brune farve og gennemsigtigheden */
+  background-color: rgba(128, 64, 0, 0.267);
+  /* Sørger for, at overlayet ligger over billedet */
+  z-index: 2;
 }
 
 .teaser img {
-  width: 100%;
-  object-fit: cover;
   z-index: 1;
+  position: relative;
 }
 
 .sticker-on-books {
@@ -348,30 +361,15 @@ header {
   position: absolute;
   top: 15%;
   color: var(--accent-2-color);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  text-transform: uppercase;
   /* Sørger for, at titlen ligger øverst */
   z-index: 3;
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
 .teaser-content {
   padding: var(--default-padding);
-  padding: 20px;
-}
-
-.teaser::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Her kan vi justere den brune farve og gennemsigtigheden */
-  background-color: rgba(128, 64, 0, 0.267);
-  /* Sørger for, at overlayet ligger over billedet */
-  z-index: 2;
 }
 
 /* ===================================MARK: Main tag, boger ======================================= */
@@ -534,7 +532,6 @@ footer {
 .footer-wrapper {
   padding: 20px;
   display: flex;
-  align-items: flex-end;
 }
 
 .footer-wrapper div:first-child {
@@ -568,8 +565,9 @@ footer a {
   gap: 10px;
 }
 .footer-social {
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer-social ul {
   display: flex;
@@ -646,58 +644,4 @@ footer a {
   .book-list {
     grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
   }
-}
-
-
-/* styling of front page*/
-
-.teaser{
-  position:relative;
-  display:flex;
-  justify-content: center;
-}
-
-
-.teaser img {
-  z-index: 1;
-  position: relative;
- 
-}
-
-
-.sticker-on-books{
-  position:absolute;
-  top:60%;
-  right:10%;
-  z-index:3; /*sørger for at sticker ligger øverst på øverst på det brune filter */
-}
-
-.title-to-teaser{
-  position:absolute;
-  top: 15%;
-  color:var(--accent-2-color);
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  z-index: 3; /* Sørger for, at titlen ligger øverst */
-  font-size: 2.5rem;
-  
-  
-}
-
-.teaser-content{
-  padding: var(--default-padding);
-  padding: 20px;
-}
-
-
-.teaser::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 64, 0, 0.267); /* Her kan vi justere den brune farve og gennemsigtigheden */
-  z-index: 2; /* Sørger for, at overlayet ligger over billedet */
 }
