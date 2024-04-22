@@ -525,6 +525,54 @@ header {
 
 /* ===================================MARK: Main tag, menu ======================================= */
 
+.menu-wrapper {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+.primary-menu-heading h2 {
+  margin-bottom: 20px;
+}
+.menu-heading {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.menu-item h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 40px;
+}
+.menu-item div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-item-extra p,
+.menu-item-extra span {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+.menu-item span {
+  padding-left: 20px;
+}
+.menu-description {
+  margin-top: 40px;
+  text-align: start;
+}
 /* ===================================MARK: Footer ======================================= */
 
 footer {
