@@ -332,6 +332,7 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
+  height: 300px;
 }
 
 .teaser::after {
@@ -346,10 +347,14 @@ header {
   /* Sørger for, at overlayet ligger over billedet */
   z-index: 2;
 }
-
+.teaser picture {
+  width: 100%;
+}
 .teaser img {
   z-index: 1;
   position: relative;
+  width: 100%;
+  object-fit: cover;
 }
 
 .sticker-on-books {
@@ -372,7 +377,7 @@ header {
 }
 
 .teaser-content {
-  padding: var(--default-padding);
+  padding: 20px;
 }
 
 /* ===================================MARK: Main tag, boger ======================================= */
@@ -587,17 +592,18 @@ footer {
 
 .footer-wrapper div:first-child {
   display: grid;
-  gap: 30px;
+  gap: 50px;
   margin-right: auto;
 }
 
 footer .opening-hours {
   padding: 0;
+  line-height: 0.5;
   align-items: flex-start;
 }
 
 footer .opening-hours li {
-  padding: 5px 1.5rem 5px 0;
+  padding: 5px 1.5rem 5px 1;
   border-bottom: none;
 }
 
@@ -613,7 +619,7 @@ footer a {
 }
 .location,
 .contact {
-  gap: 10px;
+  gap: 5px;
 }
 .footer-social {
   display: flex;
