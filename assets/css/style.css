@@ -377,7 +377,7 @@ header {
 }
 
 .teaser-content {
-  padding: var(--default-padding);
+  padding: 20px;
 }
 
 /* ===================================MARK: Main tag, boger ======================================= */
