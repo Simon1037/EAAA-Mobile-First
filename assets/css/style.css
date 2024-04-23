@@ -289,17 +289,17 @@ header {
   z-index: 1;
 }
 
-#site-intro {
+.site-intro {
   padding: 20px;
   display: flex;
+  justify-content: space-between;
 }
 
-#site-intro h1 {
+.site-intro h1 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
-#site-intro img {
+.site-intro img {
   height: 100px;
   width: 100px;
   float: right;
