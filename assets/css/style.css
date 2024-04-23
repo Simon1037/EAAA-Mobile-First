@@ -330,7 +330,7 @@ header {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 300px;
+  max-height: 300px;
 }
 
 .teaser::after {
@@ -344,6 +344,14 @@ header {
   background-color: rgba(128, 64, 0, 0.267);
   /* Sørger for, at overlayet ligger over billedet */
   z-index: 2;
+}
+.in-text-link {
+  color: var(--accent-1-color);
+  text-decoration: none;
+}
+.in-text-link:hover {
+  color: var(--primary-text-color);
+  text-decoration: underline;
 }
 .teaser picture {
   width: 100%;
