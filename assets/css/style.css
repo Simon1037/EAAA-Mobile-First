@@ -77,7 +77,6 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
-  text-wrap: balanced;
 }
 
 /* Removes a only word on a new line */
@@ -669,8 +668,12 @@ footer .opening-hours {
   align-items: flex-start;
 }
 
+footer .opening-hours h3 {
+  line-height: 30px;
+}
+
 footer .opening-hours li {
-  padding: 5px 1.5rem 5px 1;
+  padding: 0 1.5rem 5px 0;
   border-bottom: none;
 }
 
