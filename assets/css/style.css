@@ -35,7 +35,7 @@ video {
   max-width: 100%;
 }
 
-/* For images to not be able to exceed their container */
+/*For images to not be able to exceed their container */
 img {
   max-inline-size: 100%;
   max-block-size: 100%;
@@ -340,9 +340,9 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  /* Her kan vi justere den brune farve og gennemsigtigheden */
+  /* we can adjust the brown color and the transparency here*/
   background-color: rgba(128, 64, 0, 0.267);
-  /* Sørger for, at overlayet ligger over billedet */
+  /*Ensures that the overlay is over the image*/
   z-index: 2;
 }
 .in-text-link {
@@ -367,7 +367,7 @@ header {
   position: absolute;
   top: 60%;
   right: 10%;
-  /*sørger for at sticker ligger øverst på øverst på det brune filter */
+  /*ensures that the sticker is at the top of the brown filter*/
   z-index: 3;
 }
 
@@ -378,7 +378,7 @@ header {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  /* Sørger for, at titlen ligger øverst */
+  /* Ensures that the title sits on the top of the filter */
   z-index: 3;
 }
 
