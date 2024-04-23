@@ -467,6 +467,50 @@ header {
 
 /* ===================================MARK: Main tag, arrangementer ======================================= */
 
+.activities-item {
+  padding: 20px;
+}
+.activities-item:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.activities-item h2 {
+  padding: 20px 0;
+}
+.activities-item img {
+  float: right;
+  max-height: 250px;
+  max-width: 200px;
+  margin-left: 1rem;
+}
+.activities .btn {
+  font-size: 1rem;
+}
+#activities-1 .btn {
+  background-color: #ab8473;
+}
+#activities-1 .btn:hover,
+#activities-1 .btn:focus {
+  background-color: var(--accent-2-color);
+  border-color: #ab8473;
+  color: #ab8473;
+}
+#activities-2 .btn {
+  background-color: #f2771e;
+}
+#activities-2 .btn:hover {
+  background-color: var(--accent-2-color);
+  border-color: #f2771e;
+  color: #f2771e;
+}
+#activities-3 .btn {
+  background-color: #f2c41e;
+}
+#activities-3 .btn:hover {
+  background-color: var(--accent-2-color);
+  border-color: #f2c41e;
+  color: #f2c41e;
+}
+
 .calender {
   padding: 20px;
   display: grid;
@@ -532,6 +576,16 @@ header {
   color: var(--primary-text-color);
   text-align: center;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+.calender-table td[class]:not(.next-month):active {
+  border: 2px solid var(--accent-2-color);
+}
+.calender-table td.active {
+  border: 2px solid var(--accent-2-color);
+}
+.calender-table .next-month {
+  background-color: #d7d7d7;
+  color: #9e9e9e;
 }
 
 /* ===================================MARK: Main tag, menu ======================================= */
