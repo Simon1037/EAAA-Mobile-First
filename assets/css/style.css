@@ -140,7 +140,6 @@ h3 {
   cursor: pointer;
   margin: 20px 0;
 }
-
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-2-color);
@@ -149,7 +148,6 @@ h3 {
   /* Will remove the default focus outline and add when needed */
   outline: none;
 }
-
 .btn:active {
   /* this will give a inner shadow for a pressed effect */
   box-shadow: inset var(--item-shadow);
@@ -395,7 +393,7 @@ header {
 }
 
 .book-catalog {
-  padding: 20px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -538,18 +536,24 @@ header {
   text-align: center;
 }
 .primary-menu-heading h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 .menu-heading {
-  padding: 30px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+.menu-heading h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 .menu-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 .menu-item {
   display: flex;
@@ -559,7 +563,8 @@ header {
 .menu-item h4 {
   font-size: 1rem;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 25px;
+  padding-top: 5px;
 }
 .menu-item div {
   display: flex;
