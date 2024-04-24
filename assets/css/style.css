@@ -596,6 +596,15 @@ header {
   gap: 40px;
   text-align: center;
 }
+.primary-menu-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.primary-menu-heading img {
+  max-height: 50px;
+  max-width: 400px;
+}
 .primary-menu-heading h2 {
   margin-bottom: 30px;
   font-family: "Oswald", sans-serif;
